@@ -1,22 +1,23 @@
-name: check File Existence and modification Time
+
+name: Check File Existence and Modification Time
 
 on:
   push:
-      branches:
-        - main
+    branches:
+      - main
 
 jobs:
   check-file:
     runs-on: ubuntu-latest
 
     steps:
-      - name: check File
-      run|
-        FILE_PATH=path/to/your/file.ext
-        if [ -f "$FILE_PATH" ]; then
-          echo "File exists. Last modification time:"
-          # use the 'ls'command to get the file's modification time
-          ls -l --time=atime "$FILE_PATH"
-        else
-          echo "File does not exist."
-        fi
+      - name: Check File
+        run: |
+          FILE_PATH=path/to/your/file.ext
+          if [ -f "$FILE_PATH" ]; then
+            echo "File exists. Last modification time:"
+            # Use the 'ls' command to get the file's modification time
+            ls -l --time=atime "$FILE_PATH"
+          else
+            echo "File does not exist."
+          fi
