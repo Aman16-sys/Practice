@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Check File
-      run: |
-        FILE_PATH=path/to/your/file.ext
-        if [ -f "$FILE_PATH" ]; then
-          echo "File exists. Last modification time:"
-          # Use the 'ls' command to get the file's modification time
-          ls -l --time=atime "$FILE_PATH"
-        else
-          echo "File does not exist."
-        fi
+        run: |
+          FILE_PATH=path/to/your/file.ext
+          if [ -f "$FILE_PATH" ]; then
+            echo "File exists. Last modification time:"
+            # Use the 'ls' command to get the file's modification time
+            ls -l --time=atime "$FILE_PATH"
+          else
+            echo "File does not exist."
+          fi
