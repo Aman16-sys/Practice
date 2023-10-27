@@ -2,7 +2,7 @@
 name: Check File Existence and Modification Time
 
 on:
-  Push:
+  push:
     branches:
       - main
 jobs:
